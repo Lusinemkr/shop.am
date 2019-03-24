@@ -7,7 +7,7 @@
             <div class="home_title">Checkout</div>
             <div class="breadcrumbs">
                 <ul class="d-flex flex-row align-items-center justify-content-start">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="cart.html">Your Cart</a></li>
                     <li>Checkout</li>
                 </ul>

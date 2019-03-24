@@ -1,3 +1,17 @@
+
+<?php
+
+/* @var $this yii\web\View */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model \frontend\models\ContactForm */
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
+
+$this->title = 'Cart';
+$this->params['breadcrumbs'][] = $this->title;
+?>
 <!-- Search -->
 <div class="search">
     <form action="#" class="search_form" id="sidebar_search_form">
@@ -8,14 +22,14 @@
 
 <!-- Cart -->
 <div class="cart d-flex flex-row align-items-center justify-content-start">
-    <div class="cart_icon"><a href="cart.html">
+    <div class="cart_icon"><a href="cart.php">
             <img src="images/bag.png" alt="">
             <div class="cart_num">2</div>
         </a></div>
-    <div class="cart_text">bag</div>
+<!--    <div class="cart_text">bag</div>-->
     <div class="cart_price">$39.99 (1)</div>
 </div>
-</div>
+
 
 <!-- Home -->
 
@@ -172,24 +186,24 @@
 
 <!-- Newsletter -->
 
-<div class="newsletter">
-    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="newsletter_content text-center">
-                    <div class="newsletter_title_container">
-                        <div class="newsletter_title">subscribe to our newsletter</div>
-                        <div class="newsletter_subtitle">we won't spam, we promise!</div>
-                    </div>
-                    <div class="newsletter_form_container">
-                        <form action="#" id="newsletter_form" class="newsletter_form">
-                            <input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">
-                            <button class="newsletter_button">submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="newsletter">-->
+<!--    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-8 offset-lg-2">-->
+<!--                <div class="newsletter_content text-center">-->
+<!--                    <div class="newsletter_title_container">-->
+<!--                        <div class="newsletter_title">subscribe to our newsletter</div>-->
+<!--                        <div class="newsletter_subtitle">we won't spam, we promise!</div>-->
+<!--                    </div>-->
+<!--                    <div class="newsletter_form_container">-->
+<!--                        <form action="#" id="newsletter_form" class="newsletter_form">-->
+<!--                            <input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">-->
+<!--                            <button class="newsletter_button">submit</button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

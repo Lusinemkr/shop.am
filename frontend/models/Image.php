@@ -1,7 +1,8 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
+use frontend\modules\product\models\Products;
 use Yii;
 
 /**
@@ -10,7 +11,7 @@ use Yii;
  * @property int $prod_id
  * @property string $image_src
  *
- * @property Product $prod
+ * @property Products $prod
  */
 class Image extends \yii\db\ActiveRecord
 {

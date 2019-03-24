@@ -1,16 +1,121 @@
-<!-- Home -->
+<?php
+/* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+$this->title = 'My Yii Application';
 
+?>
 <div class="home">
-    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/categories.jpg" data-speed="0.8"></div>
-    <div class="home_container">
-        <div class="home_content">
-            <div class="home_title">Shop</div>
-            <div class="breadcrumbs">
-                <ul class="d-flex flex-row align-items-center justify-content-start">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Woman</a></li>
-                    <li>Accessories</li>
-                </ul>
+
+    <!-- Home Slider -->
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider">
+
+            <!-- Slide -->
+            <div class="owl-item">
+                <div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
+                <div class="home_content_container">
+                    <div class="home_content">
+                        <div class="home_discount d-flex flex-row align-items-end justify-content-start">
+                            <div class="home_discount_num">20</div>
+                            <div class="home_discount_text">Discount on the</div>
+                        </div>
+                        <div class="home_title">New Collection</div>
+                        <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="owl-item">
+                <div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
+                <div class="home_content_container">
+                    <div class="home_content">
+                        <div class="home_discount d-flex flex-row align-items-end justify-content-start">
+                            <div class="home_discount_num">20</div>
+                            <div class="home_discount_text">Discount on the</div>
+                        </div>
+                        <div class="home_title">New Collection</div>
+                        <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="owl-item">
+                <div class="background_image" style="background-image:url(images/home_slider_1.jpg)"></div>
+                <div class="home_content_container">
+                    <div class="home_content">
+                        <div class="home_discount d-flex flex-row align-items-end justify-content-start">
+                            <div class="home_discount_num">20</div>
+                            <div class="home_discount_text">Discount on the</div>
+                        </div>
+                        <div class="home_title">New Collection</div>
+                        <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Home Slider Navigation -->
+        <div class="home_slider_nav home_slider_prev trans_200"><div class=" d-flex flex-column align-items-center justify-content-center"><img src="images/prev.png" alt=""></div></div>
+        <div class="home_slider_nav home_slider_next trans_200"><div class=" d-flex flex-column align-items-center justify-content-center"><img src="images/next.png" alt=""></div></div>
+
+    </div>
+</div>
+
+<!-- Boxes -->
+
+<div class="boxes">
+    <div class="section_container">
+        <div class="container">
+            <div class="row">
+
+                <!-- Box -->
+                <div class="col-lg-4 box_col">
+                    <div class="box">
+                        <div class="box_image"><img src="images/box_1.jpg" alt=""></div>
+                        <div class="box_title trans_200"><a href="categories.html">summer collection</a></div>
+                    </div>
+                </div>
+
+                <!-- Box -->
+                <div class="col-lg-4 box_col">
+                    <div class="box">
+                        <div class="box_image"><img src="images/box_2.jpg" alt=""></div>
+                        <div class="box_title trans_200"><a href="categories.html">eyewear collection</a></div>
+                    </div>
+                </div>
+
+                <!-- Box -->
+                <div class="col-lg-4 box_col">
+                    <div class="box">
+                        <div class="box_image"><img src="images/box_3.jpg" alt=""></div>
+                        <div class="box_title trans_200"><a href="categories.html">basic pieces</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Categories -->
+
+<div class="categories">
+    <div class="section_container">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="categories_list_container">
+                        <ul class="categories_list d-flex flex-row align-items-center justify-content-start">
+                            <li><a href="categories.html">new arrivals</a></li>
+                            <li><a href="categories.html">recommended</a></li>
+                            <li><a href="categories.html">best sellers</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -19,52 +124,6 @@
 <!-- Products -->
 
 <div class="products">
-
-    <!-- Sorting & Filtering -->
-    <div class="products_bar">
-        <div class="section_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="products_bar_content d-flex flex-column flex-xxl-row align-items-start align-items-xxl-center justify-content-start">
-                            <div class="product_categories">
-                                <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li class="active"><a href="#">All</a></li>
-                                    <li><a href="#">Hot Products</a></li>
-                                    <li><a href="#">New Products</a></li>
-                                    <li><a href="#">Sale Products</a></li>
-                                </ul>
-                            </div>
-                            <div class="products_bar_side ml-xxl-auto d-flex flex-row align-items-center justify-content-start">
-                                <div class="products_dropdown product_dropdown_sorting">
-                                    <div class="isotope_sorting_text"><span>Default Sorting</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-                                    <ul>
-                                        <li class="item_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'>Default</li>
-                                        <li class="item_sorting_btn" data-isotope-option='{ "sortBy": "price" }'>Price</li>
-                                        <li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'>Name</li>
-                                    </ul>
-                                </div>
-                                <div class="product_view d-flex flex-row align-items-center justify-content-start">
-                                    <div class="view_item active"><img src="images/view_1.png" alt=""></div>
-                                    <div class="view_item"><img src="images/view_2.png" alt=""></div>
-                                    <div class="view_item"><img src="images/view_3.png" alt=""></div>
-                                </div>
-                                <div class="products_dropdown text-right product_dropdown_filter">
-                                    <div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-                                    <ul>
-                                        <li class="item_filter_btn" data-filter="*">All</li>
-                                        <li class="item_filter_btn" data-filter=".hot">Hot</li>
-                                        <li class="item_filter_btn" data-filter=".new">New</li>
-                                        <li class="item_filter_btn" data-filter=".sale">Sale</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="section_container">
         <div class="container">
             <div class="row">
@@ -185,145 +244,6 @@
                             </div>
                         </div>
 
-                        <!-- Product -->
-                        <div class="product grid-item hot">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_9.jpg" alt="">
-                                    <div class="product_tag">hot</div>
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">long red shirt</a></div>
-                                    <div class="product_price">$39.90</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item">
-                            <div class="product_inner">
-                                <div class="product_image"><img src="images/product_10.jpg" alt=""></div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">hype grey shirt</a></div>
-                                    <div class="product_price">$19.50</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item sale">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_11.jpg" alt="">
-                                    <div class="product_tag">sale</div>
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">long sleeve jacket</a></div>
-                                    <div class="product_price">$32.20<span>RRP 64.40</span></div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_12.jpg" alt="">
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">denim men shirt</a></div>
-                                    <div class="product_price">$59.90</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item hot">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_13.jpg" alt="">
-                                    <div class="product_tag">hot</div>
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">long red shirt</a></div>
-                                    <div class="product_price">$39.90</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item new">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_14.jpg" alt="">
-                                    <div class="product_tag">new</div>
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">hype grey shirt</a></div>
-                                    <div class="product_price">$19.50</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item sale">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_15.jpg" alt="">
-                                    <div class="product_tag">sale</div>
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">long sleeve jacket</a></div>
-                                    <div class="product_price">$32.20<span>RRP 64.40</span></div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product grid-item">
-                            <div class="product_inner">
-                                <div class="product_image">
-                                    <img src="images/product_16.jpg" alt="">
-                                </div>
-                                <div class="product_content text-center">
-                                    <div class="product_title"><a href="product.html">denim men shirt</a></div>
-                                    <div class="product_price">$59.90</div>
-                                    <div class="product_button ml-auto mr-auto trans_200"><a href="#">add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Newsletter -->
-
-<div class="newsletter">
-    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="newsletter_content text-center">
-                    <div class="newsletter_title_container">
-                        <div class="newsletter_title">subscribe to our newsletter</div>
-                        <div class="newsletter_subtitle">we won't spam, we promise!</div>
-                    </div>
-                    <div class="newsletter_form_container">
-                        <form action="#" id="newsletter_form" class="newsletter_form">
-                            <input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">
-                            <button class="newsletter_button">submit</button>
-                        </form>
                     </div>
                 </div>
             </div>

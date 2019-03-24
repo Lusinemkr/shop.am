@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use frontend\models\Articles;
 use frontend\models\NewForm;
 use Yii;
 
@@ -14,7 +15,7 @@ use Yii;
  * @property string $message
  * @property string $created_at
  *
- * @property Artciles $article
+ * @property Articles $article
  * @property User $user
  */
 class Comments extends \yii\db\ActiveRecord
@@ -37,7 +38,7 @@ class Comments extends \yii\db\ActiveRecord
             [['user_id', 'article_id'], 'integer'],
             [['created_at'], 'safe'],
             [['message'], 'string', 'max' => 255],
-            [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Artciles::className(), 'targetAttribute' => ['article_id' => 'id']],
+            [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Articles::className(), 'targetAttribute' => ['article_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
@@ -61,7 +62,7 @@ class Comments extends \yii\db\ActiveRecord
      */
     public function getArticle()
     {
-        return $this->hasOne(Artciles::className(), ['id' => 'article_id']);
+        return $this->hasOne(Articles::className(), ['id' => 'article_id']);
     }
 
     /**

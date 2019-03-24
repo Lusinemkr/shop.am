@@ -3,27 +3,27 @@ use yii\helpers\Url;
 ?>
 <div class="product">
 
-    <!-- Sorting & Filtering -->
-    <div class="products_bar">
-        <div class="section_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="products_bar_content d-flex flex-row align-items-center justify-content-start">
-                            <div class="product_categories">
-                                <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li class="active"><a href="#">All</a></li>
-                                    <li><a href="#">Hot Products</a></li>
-                                    <li><a href="#">New Products</a></li>
-                                    <li><a href="#">Sale Products</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   <!-- Sorting & Filtering -->
+   <div class="products_bar">
+       <div class="section_container">
+           <div class="container">
+               <div class="row">
+                   <div class="col">
+                       <div class="products_bar_content d-flex flex-row align-items-center justify-content-start">-->
+                           <div class="product_categories">-->
+                               <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">-->
+                                   <li class="active"><a href="#">All</a></li>
+                                   <li><a href="#">Hot Products</a></li>
+                                   <li><a href="#">New Products</a></li>
+                                   <li><a href="#">Sale Products</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
 
     <!-- Product Content -->
     <div class="section_container">

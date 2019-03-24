@@ -1,7 +1,8 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
+use frontend\modules\product\models\Products;
 use Yii;
 
 /**
@@ -12,7 +13,7 @@ use Yii;
  * @property int $user_id
  * @property int $qty
  *
- * @property Product $prod
+ * @property Products $prod
  */
 class Cart extends \yii\db\ActiveRecord
 {
@@ -32,7 +33,7 @@ class Cart extends \yii\db\ActiveRecord
         return [
             [['prod_id', 'user_id', 'qty'], 'required'],
             [['prod_id', 'user_id', 'qty'], 'integer'],
-            [['prod_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::className(), 'targetAttribute' => ['prod_id' => 'id']],
+            [['prod_id'], 'exist', 'skipOnError' => true, 'targetClass' => Products::className(), 'targetAttribute' => ['prod_id' => 'id']],
         ];
     }
 
@@ -54,6 +55,6 @@ class Cart extends \yii\db\ActiveRecord
      */
     public function getProd()
     {
-        return $this->hasOne(Product::className(), ['id' => 'prod_id']);
+        return $this->hasOne(Products::className(), ['id' => 'prod_id']);
     }
 }

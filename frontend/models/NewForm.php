@@ -10,6 +10,11 @@ namespace frontend\models;
 
 use yii\base\Model;
 
+/**
+ * @property mixed body
+ * @property mixed subject
+ * @property mixed email
+ */
 class NewForm extends Model
 {
     public $name;

@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use frontend\modules\product\models\Products;
 use Yii;
 
 /**
@@ -13,7 +14,7 @@ use Yii;
  * @property string $image
  * @property string $slug
  *
- * @property Product[] $products
+ * @property Products[] $products
  */
 class Categoties extends \yii\db\ActiveRecord
 {
@@ -56,6 +57,6 @@ class Categoties extends \yii\db\ActiveRecord
      */
     public function getProducts()
     {
-        return $this->hasMany(Product::className(), ['cat_id' => 'id']);
+        return $this->hasMany(Products::className(), ['cat_id' => 'id']);
     }
 }
