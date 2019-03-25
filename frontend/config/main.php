@@ -20,6 +20,18 @@ return [
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                ],
+                'common' => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                ],
+
+            ],
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -41,26 +53,30 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         'urlManager' => [
+            'class' => 'codemix\localeurls\UrlManager',
+            'languages' => ['en', 'ru','fr'],
+            'enableDefaultLanguageUrlCode' => true,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            //'suffix' => '.html',
             'rules' => [
                 'site/<action>/<slug>' => 'site/<action>',
-
                 'about-us' => 'site/about',
-                'user_id/<id:\d+>' => 'comment',
-
-            ],
-            ],
-        ],
-
-
-    'i18n' => [
-        'translations' => [
-            'app*' => [
-                'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@common/messages',
+                'products' => 'product/products/index',
+                'product/<slug>' => 'product/products/product',
+                'products/<cat_id:\d+>/<brand_id:\d+>' =>  'product/products/index',
+                'brands/<brand_id:\d+>' =>  'product/products/index',
+                'category/<cat_id:\d+>' =>  'product/products/index',
+                'blog/<action>/<id:\d+>' => 'blog/blog/article',
+                'blog/<action>/<id:\d+>/<slug>' => 'blog/blog/article',
+                'blog' => 'blog/blog/index',
+//                [
+//                    'pattern'=>'blog',
+//                    'route' => 'blog/blog/index',
+//                    'suffix' => '.aspx',
+//                ],
+                '<action:(login|about|contact)>' => 'site/<action>',
             ],
         ],
     ],

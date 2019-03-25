@@ -2,7 +2,7 @@
 
 return [
     'sourcePath' => __DIR__. '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR,
-    'languages' => ['ru-RU','en-EN','fr-FR'], //Add languages to the array for the language files to be generated.
+    'messages' => ['ru-ru','en-en','fr-fr'], //Add messages to the array for the language files to be generated.
     'translator' => 'Yii::t',
     'sort' => false,
     'removeUnused' => false,

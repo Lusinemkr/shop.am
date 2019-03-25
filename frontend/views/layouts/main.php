@@ -26,7 +26,10 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <?php
+
 $menuItems = [
+
+    ['label' => 'Yii::$app=>', 'url' => ['/site']],
     ['label' => 'Home', 'url' => ['/site']],
     ['label' => 'Products', 'url' => ['/products']],
     ['label' => 'About', 'url' => ['/site/about']],
@@ -128,7 +131,7 @@ if (Yii::$app->user->isGuest) {
 
 <!--                 Currency-->
                 <div class="info_currencies has_children">
-                    <div class="dropdown_text">usdss</div>
+                    <div class="dropdown_text">usd</div>
                     <div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 
                     <!-- Currencies Dropdown Menu -->
@@ -146,7 +149,7 @@ if (Yii::$app->user->isGuest) {
 
 <!--         Logo-->
         <div class="sidebar_logo">
-            <a href="#"><div>Gift<span>City</span></div></a>
+            <a href="<?php \yii\helpers\Url::to('views/layouts/main.php') ?>"><div>Gift<span>City</span></div></a>
         </div>
 
 <!--         Sidebar Navigation-->
@@ -157,7 +160,7 @@ if (Yii::$app->user->isGuest) {
                 <li><a href="#">Ապակեղեն<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="#">Խաղալիքներ<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="">Հուշանվերներ<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a href="#">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
@@ -182,6 +185,27 @@ if (Yii::$app->user->isGuest) {
     </div>
 
     <?= $content ?>
+    <div class="newsletter">
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="newsletter_content text-center">
+                        <div class="newsletter_title_container">
+                            <div class="newsletter_title">subscribe to our newsletter</div>
+                            <div class="newsletter_subtitle">we won't spam, we promise!</div>
+                        </div>
+                        <div class="newsletter_form_container">
+                            <form action="#" id="newsletter_form" class="newsletter_form">
+                                <input type="email" class="newsletter_input" placeholder="your e-mail here" required="required">
+                                <button class="newsletter_button">submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
 
     <footer class="footer">
